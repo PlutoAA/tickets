@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background-color: var(--user-layer);
+  z-index: 9999;
+  padding: 8px 20px;
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.burgerBtn {
+  outline: 0;
+  border: 0;
+  background: none;
+}
+
+.menu {
+  width: 100%;
+  top: 60px;
+  position: absolute;
+  transform: translateY(0);
+  background-color: #272727;
+  z-index: 999;
+  
+  &[data-collapse="true"] {
+    transform: translateY(-100%);
+  }
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}

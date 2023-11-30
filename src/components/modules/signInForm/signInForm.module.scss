@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  margin-bottom: 120px;
+
+  &__utility {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  &__forgotPass {
+    color: var(--utility-blue);
+  }
+
+  &__btn {
+    width: min-content;
+    border: none;
+    border-radius: 6px;
+    background: rgba(47, 90, 174, 1);
+    font-size: 24px;
+    color: var(--main-text);
+    padding: 4px 32px;
+    margin: 0 auto;
+    margin-top: 32px;
+    text-wrap: nowrap;
+    cursor: pointer;
+  }
+}

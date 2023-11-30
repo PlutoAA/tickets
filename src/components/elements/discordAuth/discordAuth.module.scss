@@ -1,0 +1,25 @@
+.discordBtn {
+  height: 52px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(22, 22, 22, 1);
+  text-align: center;
+  cursor: pointer;
+  &>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &>span {
+    line-height: 52px;
+    font-size: 18px;
+  }
+  &>span::before {
+    position: relative;
+    content: url('/img/discord.svg');
+    vertical-align: middle;
+    left:-10px;
+  }
+}

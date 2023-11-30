@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--stroke);
+  background: #414141;
+  padding: 24px 4px 8px;
+
+  &__name {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  &__rank {
+    color: var(--third-text);
+  }
+
+  [data-collapse="true"] &__name, [data-collapse="true"] &__rank {
+    display: none;
+  }
+}

@@ -1,0 +1,67 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @media (max-width: 1024px) {
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    @media (max-width: 1024px) {
+      flex-direction: row-reverse;
+    }
+
+    &__icon {
+      @media (max-width: 1024px) {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    &__text {
+      font-weight: 600;
+      color: var(--third-text);
+      text-wrap: nowrap;
+      opacity: 0;
+      animation: fade-in 0.15s 0.05s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
+      &:hover {
+        color: var(--utility-blue);
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+    }
+
+    &__active {
+      color: var(--utility-blue);
+    }
+  }
+
+}
+
+[data-collapse="true"] .nav__item__text {
+  display: none;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,46 @@
+.tableBlock {
+  min-width: 308px;
+  flex: 0 2 60%;
+  padding: 16px 0;
+  border-radius: 6px;
+  background-color: var(--user-layer);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  @media (max-width: 1280px) {
+    padding: 4px 0;
+  }
+
+  &__input {
+    height: 49px;
+    background-color: var(--light-layer);
+    color: var(--main-text);
+    border-radius: 12px;
+    border: none;
+    padding: 13.5px 14px;
+    font-size: 16px;
+
+    &::placeholder {
+      color: var(--secondary-text);
+      font-size: 16px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    gap: 16px;
+    padding: 16px 0;
+
+    &__label {
+      position: relative;
+
+      &__text {
+        font-size: 12px;
+        color: var(--third-text);
+        position: absolute;
+        top: -16px;
+        left: 8px;
+      }
+    }
+  }
+}
