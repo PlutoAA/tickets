@@ -4,6 +4,7 @@ import {
   LinearScale,
   CategoryScale,
   PointElement,
+  LineController,
   LineElement,
   Title,
   Legend,
@@ -46,6 +47,7 @@ const LineChart = ({ chartData, labels }) => {
     LinearScale,
     PointElement,
     LineElement,
+    LineController,
     Title,
     Tooltip,
     Legend
