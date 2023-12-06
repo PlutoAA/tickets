@@ -14,11 +14,14 @@
 .container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   gap: 32px;
   @media (max-width: 1024px) {
     gap: 10px;
+  }
+  @media (max-width: 800px) {
+    padding: 40px 0;
   }
 }

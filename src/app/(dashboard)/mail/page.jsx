@@ -1,7 +1,11 @@
 import Table from "@/components/elements/table/Table";
 import styles from "./page.module.scss";
+import StyledInput from "@/components/elements/inputs/StyledInput";
 
 export default function MailBox() {
+
+  // const { shouldLoadContent } = useRedirectByUserCheck()
+  const shouldLoadContent = true
 
   const columns = [
     { field: 'id', headerName: 'ID', flex: 1, minWidth: 100, align:'center', headerAlign: 'center' },
@@ -50,14 +54,18 @@ export default function MailBox() {
 
   return (
     <main className={styles.wrapper}>
+      {shouldLoadContent && (
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.content__header}>
-            <span>Mails</span>
+            <StyledInput label="Email" />
+            <StyledInput label="Subject" />
+            <StyledInput label="Order ID" />
           </div>
           <Table columns={columns} rows={rows} />
         </div>
       </div>
+      )}
     </main>
   );
 }

@@ -4,6 +4,9 @@ import styles from "./page.module.scss";
 
 export default function Statistic() {
 
+  // const { shouldLoadContent } = useRedirectByUserCheck()
+  const shouldLoadContent = true
+
   const columns = [
     { field: 'id', headerName: 'ID', flex: 1, minWidth: 100, align:'center', headerAlign: 'center' },
     {
@@ -51,10 +54,12 @@ export default function Statistic() {
 
   return (
     <main className={styles.wrapper}>
+      {shouldLoadContent && (
       <div className={styles.container}>
         <ChartsBlock />
         <TableBlock columns={columns} rows={rows} />
       </div>
+      )}
     </main>
   );
 }

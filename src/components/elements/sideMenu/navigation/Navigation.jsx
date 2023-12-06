@@ -7,7 +7,7 @@ import MailboxIcon from "./icons/MailboxIcon";
 import CommandStatsIcon from "./icons/CommandStatsIcon";
 import styles from "./navigation.module.scss";
 
-const Navigation = ( {collapse} ) => {
+const Navigation = ( {collapse, collapseToggler} ) => {
   const pathname = usePathname()
 
   const links = [
@@ -45,7 +45,7 @@ const Navigation = ( {collapse} ) => {
           const iconColor = pathname === href ? '#71A1E9' : '#757575'
           return (
           <Link key={name} href={href} passHref legacyBehavior>
-            <li className={styles.nav__item}>
+            <li className={styles.nav__item} onClick={collapseToggler}>
               <Icon color={iconColor} />
               <a className={`${styles.nav__item__text} ${pathname === href && styles.nav__item__active}`}>{name}</a>
             </li>

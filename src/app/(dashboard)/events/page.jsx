@@ -6,7 +6,7 @@ import "react-toggle/style.css"
 import Toggle from 'react-toggle';
 
 export default function Events() {
-
+  const shouldLoadContent = true
   const columns = [
     { field: 'id', headerName: 'ID', flex: 1, minWidth: 100, align:'center', headerAlign: 'center' },
     {
@@ -54,7 +54,8 @@ export default function Events() {
 
   return (
     <main className={styles.wrapper}>
-      <div className={styles.container}>
+      {shouldLoadContent && (
+        <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.content__header}>
             <StyledInput label="Keywords" />
@@ -70,6 +71,7 @@ export default function Events() {
           <Table columns={columns} rows={rows} />
         </div>
       </div>
+      )}
     </main>
   );
 }

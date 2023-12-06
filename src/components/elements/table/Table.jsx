@@ -3,11 +3,14 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
+import { Inter } from "next/font/google";
 import './table.module.scss'
+
+const inter = Inter({ subsets: ["latin"] });
 
 const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
   [`& .${gridClasses.row}.odd`]: {
-    backgroundColor: 'rgba(217, 217, 217, 0.40)',
+    backgroundColor: 'rgba(65, 65, 65, 0.4)',
   },
   [`& .${gridClasses.row}`]: {
     minWidth: '100%',
@@ -15,7 +18,7 @@ const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
     maxHeight: '49px !important',
     fontSize: '20px',
     fontWeight: '300',
-    fontFamily: 'Inter'
+    fontFamily: inter
   },
   '&.MuiDataGrid-root': {
     width: '100%',
@@ -75,14 +78,20 @@ const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
 const Table = ({columns, rows}) => {
   return (
       <Box sx={{ 
-        height: '90%', 
-        maxHeight: '45vw',
-        minHeight: '400px',
+        height: '400px',
         width: '100%',
-        '@media (max-width: 1024px)': {
-          height: '90%',
-          maxHeight: '70vh',
-        }
+        '@media (min-width: 794px)': {
+          height: '400px',
+        },
+        '@media (min-width: 1025px)': {
+          height: '500px',
+        },
+        '@media (min-width: 1549px)': {
+          height: '600px',
+        },
+        '@media (min-width: 1701px)': {
+          height: '680px',
+        },
       }}>
         <StripedDataGrid 
           rows={rows}

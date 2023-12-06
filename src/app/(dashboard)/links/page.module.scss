@@ -61,7 +61,11 @@
 
   label {
     min-width: 242px;
-    width: 40%;
+    width: 100%;
+  }
+
+  @media (max-width: 1248px) {
+    gap: 32px;
   }
 }
 

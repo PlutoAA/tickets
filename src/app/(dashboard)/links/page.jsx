@@ -14,6 +14,9 @@ export default function Links() {
   const link = useStore($link)
   const inputs = useStore($inputs)
 
+  // const { shouldLoadContent } = useRedirectByUserCheck()
+  const shouldLoadContent = true
+
   const defaultUrl= `https://example.com`
 
   const handleOnChange = (position) => {
@@ -38,7 +41,8 @@ export default function Links() {
 
   return (
     <main className={styles.wrapper}>
-      <div className={styles.container}>
+      {shouldLoadContent && (
+        <div className={styles.container}>
         <div className={styles.settings__block}>
           <div>
             <StyledInput label="event id" type="text" />
@@ -85,6 +89,7 @@ export default function Links() {
           <button onClick={() => {navigator.clipboard.writeText(link)}} className={styles.linkBtn}>Copy url</button>
         </div>
       </div>
+      )}
     </main>
   );
 }

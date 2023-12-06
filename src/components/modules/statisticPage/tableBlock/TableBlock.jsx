@@ -8,7 +8,7 @@ import { styled } from '@mui/material/styles';
 
 const StyledDay = styled(DatePicker)(({ theme }) => ({
   '&.MuiTextField-root': {
-    backgroundColor: 'rgba(217, 217, 217, 0.40)',
+    backgroundColor: 'rgba(65, 65, 65, 0.4)',
     borderRadius: '12px',
     height: '49px', 
   },

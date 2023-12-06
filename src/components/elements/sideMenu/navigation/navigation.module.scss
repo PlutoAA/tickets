@@ -60,6 +60,10 @@
   display: none;
 }
 
+[data-collapse="true"] .nav {
+  margin-top: 110px;
+}
+
 @keyframes fade-in {
   100% {
     opacity: 1;

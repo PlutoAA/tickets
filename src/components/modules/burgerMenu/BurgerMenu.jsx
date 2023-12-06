@@ -24,7 +24,7 @@ const BurgerMenu = () => {
         </button>
       </div>
       <div className={styles.menu} data-collapse={isCollapsed}>
-        <Navigation />
+        <Navigation collapseToggler={toggleCollapse} />
       </div>
     </div>
   );
