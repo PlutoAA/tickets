@@ -1,12 +1,8 @@
 'use client'
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import { DataGrid, gridClasses } from '@mui/x-data-grid';
-import { Inter } from "next/font/google";
 import './table.module.scss'
-
-const inter = Inter({ subsets: ["latin"] });
 
 const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
   [`& .${gridClasses.row}.odd`]: {
@@ -18,7 +14,7 @@ const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
     maxHeight: '49px !important',
     fontSize: '20px',
     fontWeight: '300',
-    fontFamily: inter
+    fontFamily: 'Inter',
   },
   '&.MuiDataGrid-root': {
     width: '100%',
